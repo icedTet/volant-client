@@ -1,3 +1,5 @@
+// intentionally unused
+
 export const mixamoVRMRigMap = {
   mixamorigHips: "hips",
   mixamorigSpine: "spine",
