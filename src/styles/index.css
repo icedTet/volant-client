@@ -1,0 +1,10 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+
+/* Your own custom component styles */
+
+@import "tailwindcss/utilities";
+
+.basicinput {
+  @apply w-full h-12 rounded-lg border border-gray-200 focus:border-indigo-800 focus:outline-none px-4 bg-gray-300/25 shadow-inner font-wsans text-base text-gray-600 transition-all duration-300;
+}
