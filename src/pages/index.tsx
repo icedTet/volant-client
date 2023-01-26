@@ -14,7 +14,7 @@ export const HomePage = () => {
   const [streamURL, setStreamURL] = useState("");
   const [key, setKey] = useState("");
   const [streamWidth, setStreamWidth] = useState(1280);
-  const [streamHeight, setStreamHeight] = useState(730);
+  const [streamHeight, setStreamHeight] = useState(720);
   const [streamFPS, setStreamFPS] = useState(60);
   const [modalOpen, setModalOpen] = useState(false)
   const [file, setFile] = useState(null);
