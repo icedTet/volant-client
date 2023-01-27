@@ -23,22 +23,7 @@ export const useSelectedModel = () => {
     return () => {
       VRMLoader.getInstance().off("ready", onLoaded);
       VRMLoader.getInstance().off("primaryModelChanged", onLoaded);
-      // cleanup
     };
-    // const clas = new VRMFile(
-    //   `https://cdn.glitch.com/29e07830-2317-4b15-a044-135e73c7f840%2FAshtra.vrm?v=1630342336981`,
-    //   "cute anime girl",
-    //   "cag"
-    // );
-    // clas.once("loaded", () => {
-    //   console.log("loaded model");
-    //   setModel(null);
-    //   setModel(clas.model);
-    // });
-    // clas.getVRM().then((vrm) => {
-    //   console.log("loaded vrm");
-    //   setModel(vrm);
-    // });
   }, []);
   console.log("modelupdate", model);
   return model;

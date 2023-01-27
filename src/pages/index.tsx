@@ -30,19 +30,19 @@ export const HomePage = () => {
   const modelMap = useAllModelData();
   return (
     <div id="top" className={`grid grid-cols-10 gap-2 w-full min-h-screen`}>
-      <div className={`col-span-5 bg-gray-100 p-16 max-h-screen overflow-auto`}>
+      <div className={`col-span-5 bg-black p-16 max-h-screen overflow-auto`}>
         <div className="flex flex-col gap-12">
           <div className="flex items-center justify-between">
             <h1
-              className={`text-6xl font-extrabold text-indigo-700 font-poppins`}
+              className={`text-6xl font-bold text-cyan-300`}
             >
               Volant
             </h1>
-            <Link href="/live" className={`py-2 px-3 text-xl font-semibold text-gray-100 bg-gray-800 rounded-2xl hover:bg-indigo-700`}>Go Live</Link>
+            <Link href="/live" className={`py-2 px-3 text-xl font-semibold bg-gray-800 rounded-2xl hover:bg-gray-700`}>Go Live</Link>
           </div>
           <div className="flex flex-col gap-4">
             <h2
-              className={`text-base font-bold text-gray-500 font-poppins`}
+              className={`text-base font-semibold`}
             >
               Stream Connection Settings
             </h2>
@@ -66,7 +66,7 @@ export const HomePage = () => {
 
           <div className="flex flex-col gap-4 w-full">
             <h3
-              className={`text-base font-bold text-gray-500 font-poppins`}
+              className={`text-base font-semibold`}
             >
               Stream Quality Settings
             </h3>
@@ -78,7 +78,7 @@ export const HomePage = () => {
                 value={streamWidth}
                 onChange={(e) => setStreamWidth(e.target.value as any)}
               />
-              <span className={`text-gray-900/30`}>x</span>
+              <span>×</span>
               <input
                 type={"number"}
                 placeholder="Stream Height"
@@ -86,7 +86,7 @@ export const HomePage = () => {
                 value={streamHeight}
                 onChange={(e) => setStreamHeight(e.target.value as any)}
               />
-              <span className={`text-gray-900/30`}>@</span>
+              <span>at</span>
               <input
                 type={"number"}
                 placeholder="Stream FPS"
@@ -94,20 +94,19 @@ export const HomePage = () => {
                 value={streamFPS}
                 onChange={(e) => setStreamFPS(e.target.value as any)}
               />
-              <span className={`text-gray-900/30`}>fps</span>
+              <span>fps</span>
             </div>
           </div>
           <div className="flex flex-col gap-4">
             <h2
-              className={`text-base font-bold text-gray-500 font-poppins`}
+              className={`text-base font-semibold`}
             >
-              Avatar Settings
+              Model Settings
             </h2>
             <div className={`grid grid-cols-2 lg:grid-cols-3  gap-4 w-full`}>
               {Array.from(modelMap?.keys() || []).map((key) => (
                 <AnimeGirlCard
                   key={`anime-card-${key}`}
-                  // model={VRMLoader.getInstance().modelMap.get(key)!}
                   data={VRMLoader.getInstance().modelDataMap.get(key)!}
                   onClick={(model) => {
                     VRMLoader.getInstance().setPrimaryModel(model.id);

@@ -7,7 +7,6 @@ import React from "react";
 function MyApp({ Component, pageProps }: AppProps) {
   useEffect(() => {
     if (!globalThis.navigator) return;
-    // FaceAI.getInstance().init();
   }, []);
   return (
     <>

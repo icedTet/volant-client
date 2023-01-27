@@ -5,6 +5,10 @@
 
 @import "tailwindcss/utilities";
 
+body {
+  color: #e0e0e0;
+}
+
 .basicinput {
-  @apply w-full h-12 rounded-lg border border-gray-200 focus:border-indigo-800 focus:outline-none px-4 bg-gray-300/25 shadow-inner font-wsans text-base text-gray-600 transition-all duration-300;
+  @apply w-full h-11 rounded-md border border-gray-400 px-3 bg-gray-800 text-base;
 }

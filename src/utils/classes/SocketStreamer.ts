@@ -15,7 +15,7 @@ export class SocketConnection extends EventEmitter {
   private streaming?: boolean;
   constructor() {
     super();
-    this.socket = io("http://***REMOVED***:443", { transports: ["websocket"] });
+    this.socket = io("http://localhost:443", { transports: ["websocket"] });
   }
   setMediaStream(stream: MediaStream) {
     this.mediaStream = stream;
