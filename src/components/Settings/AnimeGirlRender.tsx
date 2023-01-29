@@ -76,7 +76,6 @@ export const AnimeGirlRenderer = (props: { model?: VRM | null }) => {
         zoom={1}
         ref={camera}
       ></PerspectiveCamera>
-      {/* <OrbitControls enableDamping={false} po /> */}
     </Canvas>
   );
 };

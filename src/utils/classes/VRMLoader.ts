@@ -189,7 +189,6 @@ export class VRMFile extends EventEmitter {
     this.emit("error", error);
   }
 }
-// VRMLoader.getInstance().setPrimaryModel("rin");
 modelDefaultData.map((modelDefaultData) => {
   const { name, id, url } = modelDefaultData;
   VRMLoader.getInstance().load(url, name, id);

@@ -11,23 +11,8 @@ export const WeebFeed = (props: { large?: boolean }) => {
   const model = useSelectedModel();
   const camera = useRef<PerspectiveCamera>();
   const canvasRef = useRef<HTMLCanvasElement>(null);
-  // useeff
-  // const orbitCamera = new PerspectiveCamera(
-  //   35,
-  //   window.innerWidth / window.innerHeight,
-  //   0.1,
-  //   1000
-  // );
-  // orbitCamera.position.set(0.0, 1.4, 0.7);
 
-  // Import Character VRM
-  // Import model from URL, add your own model here
-
-  // Animate Rotation Helper function
-
-  // let oldLookAt = new Euler();
-
-  /* VRM Character Animator */
+  // VRM Character Animator
   useEffect(() => {
     if (!camera.current) return;
     console.log("cam");
@@ -45,7 +30,6 @@ export const WeebFeed = (props: { large?: boolean }) => {
 
   return (
     <div className={`w-full h-full relative`}>
-      {/* <CameraFeed /> */}
       <Canvas
         eventSource={globalThis?.document?.getElementById("root")!}
         eventPrefix="client"
@@ -54,14 +38,12 @@ export const WeebFeed = (props: { large?: boolean }) => {
         ref={canvasRef}
       >
         <PCamera
-          // position={new Vector3(0, 2, 0)}
           makeDefault
           zoom={1}
           ref={camera}
         ></PCamera>
         <ambientLight intensity={1} />
 
-        {/* <OrbitControls camera={camera.current} enableDamping={false} /> */}
         {model && (
           <ModelRenderer model={model} camera={camera} large={props.large} />
         )}

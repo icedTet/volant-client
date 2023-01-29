@@ -21,33 +21,6 @@ export class KalidokitController {
     FaceAI.getInstance().off("results", this.animateVRM.bind(this));
     console.log("vrm removed ", this.vrm);
   }
-  // public update = (delta: number) => {
-  //   this.vrm?.update(delta);
-  // };
-
-  // public animate = () => {
-  //   requestAnimationFrame(this.animate);
-  //   this.update(this.clock.getDelta());
-  //   this.renderer.render(this.scene, this.orbitCamera);
-  // };
-
-  // private load(onProgress: (event: ProgressEvent<EventTarget>) => void) {
-  //   this.loader.crossOrigin = "anonymous";
-  //   return new Promise<GLTF>((resolve, reject) =>
-  //     this.loader.load(
-  //       this.model,
-  //       async (gltf) => {
-  //         resolve(gltf);
-  //       },
-
-  //       onProgress,
-
-  //       (error) => {
-  //         reject(error);
-  //       }
-  //     )
-  //   );
-  // }
 
   public rigRotation = (
     name: string,

@@ -72,8 +72,8 @@ export const CameraFeed = () => {
         const perf = performance.now();
         FaceAI.getInstance().send({ image: videoElement });
       },
-      width: 1280, //1280,
-      height: 960 // 960,
+      width: 1280,
+      height: 960
     });
     cam.start();
     FaceAI.getInstance().on("results", drawResults);
@@ -85,28 +85,7 @@ export const CameraFeed = () => {
     };
   }, []);
 
-  // const dylanSocketTest = () => {
-  //   const server = new SocketConnection();
-  //   console.log("create socket connection");
-
-  //   const mediaStream = input_video.current.captureStream(30);
-  //   const mediaRecorder = new MediaRecorder(mediaStream, {
-  //     mimeType: "video/webm",
-  //     videoBitsPerSecond: 3000000,
-  //   });
-
-  //   console.log(mediaStream);
-
-  //   mediaRecorder.ondataavailable = (e: BlobEvent) => {
-  //     console.log("data avaliable" + e.data);
-  //     server.getSocket().emit("message", e.data);
-  //   };
-
-  //   console.log(mediaRecorder);
-  // };
-
   return (
-    // <div className={`w-full h-full`}>
     <div className={`-scale-x-100 w-auto h-full relative`}>
       <video
         ref={input_video}
@@ -118,10 +97,8 @@ export const CameraFeed = () => {
       ></video>
       <canvas
         ref={guides}
-        className={`w-full h-full absolute top-0 left-0 bg-slate-500/20`}
+        className={`w-full h-full absolute top-0 left-0 bg-slate-500`}
       />
     </div>
-    // {/* <button onClick={dylanSocketTest}>socket</button> */}
-    // </div>
   );
 };

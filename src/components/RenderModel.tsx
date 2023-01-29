@@ -24,16 +24,11 @@ export const RenderModel = (props: { model: VRM }) => {
         zoom={1}
         ref={camera}
       ></PCamera>
-      {/* <CLog /> */}
 
       <OrbitControls camera={camera.current} enableDamping={false} />
       <group>
         <primitive object={model.scene} />
       </group>
-      {/* <mesh>
-          <boxGeometry args={[1, 1, 1]} />
-          <meshStandardMaterial color={"orange"} />
-        </mesh>  */}
     </Canvas>
   );
 };

@@ -8,11 +8,6 @@ module.exports = {
   ],
   darkMode: "class",
   theme: {
-    fontFamily: {
-      poppins: ["Poppins", "sans-serif"],
-      // work sans
-      wsans: ["Work Sans", "sans-serif"],
-    },
     extend: {
       animation: {
         "reverse-spin": "reverse-spin 1s linear infinite",

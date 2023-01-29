@@ -57,12 +57,12 @@ export const AnimeGirlCard = (props: {
         </Canvas>
       </div>
       <div
-        className={`absolute top-0 left-0 w-full h-full pointer-events-none bg-gradient-to-b from-transparent via-gray-200/50 to-gray-200 group-hover:opacity-80 transition-all duration-300`}
+        className={`absolute top-0 left-0 w-full h-full pointer-events-none bg-gradient-to-b from-transparent to-gray-200 group-hover:opacity-80 transition-all duration-300`}
       />
       <div
         className={`absolute bottom-0 left-0 w-full h-fit p-4 flex flex-col gap-2`}
       >
-        <span className={`text-lg font-bold text-gray-600 font-wsans`}>
+        <span className={`text-lg font-bold text-gray-600`}>
           {data.name}
         </span>
         <span
